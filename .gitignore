@@ -1,0 +1,64 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+
+#compoment
+ <Functional/>
+    <Class/>
+    <Click_with_function/>
+    <Like/>
+    <Simple_props name="sakshi"></Simple_props>
+    <Props_with_class name="sakshi"></Props_with_class>
+    <Props_with_class name="sakshi" enrollment="0902it201048"></Props_with_class>
+    <Hide_show_button></Hide_show_button>
+
+
+#routing
+import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Pricing from './components/pricing';
+import Feature from './components/Feature';
+import Header from './components/Header';
+import If_else from './If_else';
+function App() {
+  return (
+    <div className="App">
+     <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Header />}>
+        <Route index element={<Home />}/>
+          <Route path="Pricing" element={<Pricing />} />
+          <Route path="Feature" element={<Feature />} />
+          <Route path="If_else" element={<If_else/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+#in header we use to="/Feature" instead of href and link instead of a
